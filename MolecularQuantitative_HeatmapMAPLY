@@ -1,0 +1,10 @@
+library("heatmaply")
+use_abundance_file_mzMINE ("FILE only mzMINE")
+use_abundance_file_mzMINE ("Integration of mzMINE file with identification of GNPSMOLDISCOVERYDEREPLICATORSIRIUS")
+
+
+
+read.csv("FILEname.csv")
+output_file_name <- read.csv("FILEname.csv")
+
+heatmaply(output_file_name)
