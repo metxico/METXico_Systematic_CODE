@@ -5,7 +5,7 @@ use_count_file_GNPSMoldiscoveryDereplicatorSIRIUS "FILE ClassyFire Subclass"
 use_count_file_SIRIUS "FILE npClassifier npPathway"
 
 
-read.csv("VIEW COMPOUND and FILE.csv")
-output_file_name <- read.csv("VIEW COMPOUND and FILE.csv")
+read.csv("FILEname.csv")
+output_file_name <- read.csv("FILEname.csv")
 
 heatmaply(output_file_name)
