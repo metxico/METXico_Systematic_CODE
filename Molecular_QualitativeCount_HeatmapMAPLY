@@ -1,5 +1,5 @@
 library("heatmaply")
-use_counte_file_GNPS "VIEW COMPOUND and FILE"
+use_count_file_GNPS "VIEW COMPOUND and FILE"
 
 
 read.csv("VIEW COMPOUND and FILE.csv")
