@@ -1,0 +1,19 @@
+library(d3heatmap)
+use_count_file_GNPS "VIEW COMPOUND and FILE"
+Is posible to use for moleculartaxonomy and molecularcuantitative analysis like maply
+
+
+read.csv("heatmap.csv")
+filename_output <- read.csv("heatmap.csv", row.names = 1)
+d3heatmap(filename_output, scale = "column") 
+
+Optional
+
+d3heatmap(filename_output, scale = "column", dendrogram = "none",
+          color = "Blues")
+
+d3heatmap(filename_output, scale = "column", dendrogram = "none",
+          color = scales::col_quantile("Blues", NULL, 5))
+
+d3heatmap(filename_output, colors = "Blues", scale = "col",
+          dendrogram = "row", k_row = 3)
