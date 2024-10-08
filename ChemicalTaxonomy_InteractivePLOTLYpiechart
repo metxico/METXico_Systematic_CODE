@@ -1,6 +1,10 @@
 library (plotly)
 Username (chart_studio)
 API key (chart_studio)
+use_count_file_GNPSMoldiscoveryDereplicatorSIRIUS "FILE ClassyFire or is possible with npClassifier Superclass???"
+use_count_file_GNPSMoldiscoveryDereplicatorSIRIUS "FILE ClassyFire or is possible with npClassifier class???"
+use_count_file_GNPSMoldiscoveryDereplicatorSIRIUS "FILE ClassyFire Subclass"
+use_count_file_SIRIUS "FILE is possible with npClassifier Pathway"
 
 #inputfile
 outputfile <- read.csv(file='inputfile.csv')
