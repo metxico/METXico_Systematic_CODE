@@ -1,0 +1,34 @@
+library (plotly)
+Username (chart_studio)
+API key (chart_studio)
+
+#inputfile
+outputfile <- read.csv(file='inputfile.csv')
+outputfile2 <- read.csv(file='outputfile.csv')
+
+
+#Dataframe contruction
+outputfile3 <- data.frame(Class = c(outputfile2$Class), Annotation = c(outputfile2$Annotation)) #ClassDataframe
+outputfile4 <- data.frame(Superclass = c(outputfile3$Superclass), Annotation = c(outputfile3$Annotation)) #SuperclassDataframe
+
+#Piechart core
+fig_outputfile5 <- plot_ly(outputfile3, labels = ~Class, values = ~Annotation, type = 'pie', 
+  textfont = list(size = 22))%>% #Text size within the slides
+        layout(font=list(size = 30), #Text size of the legend box
+          legend = list(title=list(text='<b> Class </b>'), y=0.5)) #Legend title
+fig_outputfile5 # ClassPiechart
+
+fig_output6 <- plot_ly(fig_outputfile4, labels = ~Superclass, values = ~Annotation, type = 'pie', 
+  textfont = list(size = 23))%>% #Text size within the slides
+        layout(font=list(size = 30), #Text size of the legend box
+          legend = list(title=list(text='<b> Superclass </b>'), x= 100, y=0.5))
+fig_output6 # SuperclassPiechart
+
+#Chart Studio
+Sys.setenv("write the words: plotly_username"="write: your_plotly_username")
+Sys.setenv("Write the words: plotly_api_key"="Write: your_api_key")
+
+#Outputfile InteractivePieChart
+plotly_IMAGE(fig_outputfile5, format="png", width = 1920, height = 1080, out_file="Outputplotname.png") # ClassPiechart
+plotly_IMAGE(fig_output6, format="png", width = 1920, height = 1080, out_file="outputplotname.png") # SuperclassPiechart
+
