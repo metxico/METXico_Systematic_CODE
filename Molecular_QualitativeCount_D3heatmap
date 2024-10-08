@@ -8,21 +8,3 @@ read.csv("VIEW COMPOUND and FILE.csv")
 filename_output <- read.csv("VIEW COMPOUND and FILE.csv", sep=",")
 filenameoutput2_matrix <- data.matrix(filename_output)
 filenameoutput3_heatmap <- heatmap(filenameoutput2_matrix, Rowv=NA, Colv=NA, col = cm.colors(256), scale="column", margins=c(5,10))
-d3heatmap(filenameoutput3_heatmap, scale = "column")
-
-Or use this option
-
-read.csv("VIEW COMPOUND and FILE.csv")
-filename_output <- read.csv("VIEW COMPOUND and FILE.csv", row.names = 1)
-d3heatmap(filename_output, scale = "column") 
-
-Options
-
-d3heatmap(filenameoutput3_heatmap or filename_output, scale = "column", dendrogram = "none",
-    color = "Blues")
-
-d3heatmap(filenameoutput3_heatmap or filename_output, scale = "column", dendrogram = "none",
-    color = scales::col_quantile("Blues", NULL, 5))
-
-d3heatmap(filenameoutput3_heatmap or filename_output, colors = "Blues", scale = "col",
-    dendrogram = "row", k_row = 3)
